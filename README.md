@@ -1,5 +1,5 @@
-# Install Linux Mint 22 (XCFE) on Framework 13 Inch (12th Gen Intel) Laptop
-A logbook for installing Linux Mint 22 on a Framework 13'' Laptop 12th Gen Intel
+# Install Linux Mint 22 (XFCE) on Framework 13 Inch (12th Gen Intel) Laptop
+A logbook for installing Linux Mint 22 (XFCE) on a Framework 13'' Laptop 12th Gen Intel
 
 # First things first
 ## Update software
