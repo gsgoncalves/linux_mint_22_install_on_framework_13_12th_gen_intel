@@ -170,8 +170,13 @@ curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbun
 sudo apt update
 sudo apt install albert
 ```
-
+### Shortcut
 To enable the Alt+Space shortcut, you need to disable the "Window operations menu" shortcut.
 - Settings - > Window Manager -> Keyboard -> Clear the "Window operations menu" shortcut
 - Then enable the shortcut on Albert's Settings
-  
+
+### Autostart
+```console
+cp /usr/share/applications/albert.desktop ~/.config/autostart/
+chmod +x ~/.config/autostart/albert.desktop
+```
