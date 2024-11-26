@@ -162,6 +162,44 @@ polkit.addRule(function(action, subject) {
 });
 ```
 
+## Enable auto-connection on headphones and other Bluetooth devices
+
+1. Edit the following file:
+   ```bash
+   sudo nano /etc/bluetooth/main.conf
+   ```
+   1.1. Make sure the following option is enabled:
+   ```text
+   AutoEnable=true
+   ```
+   
+   1.2. (Optional) Get device UUIDs to configure the reconnection policy:
+   - Enter Bluetooth control, list devices, trust devices (using MAC ID), and get the UUIDs (using MAC ID).
+   ```bash
+   bluetoothctl
+   devices
+   trust XX:XX:XX:XX:XX:XX
+   info XX:XX:XX:XX:XX:XX
+   ```
+   **Note**: Depending on the device type, it may list multiple UUIDs. Important UUIDs for the reconnection policy include:
+
+   - **Headphones**:
+     - UUID: Headset
+     - UUID: Advanced Audio Distribution Profile (A2DP)
+     - UUID: Audio Sink
+   - **Mice**:
+     - UUID: Human Interface Device
+   - **Keyboards**:
+     - UUID: Human Interface Device
+
+   1.3. (Optional) Configure the reconnection policy:
+   ```text
+   ReconnectUUIDs=00001108-0000-1000-8000-00805f9b34fb,0000110b-0000-1000-8000-00805f9b34fb,0000110d-0000-1000-8000-00805f9b34fb,00001812-0000-1000-8000-00805f9b34fb,00001124-0000-1000-8000-00805f9b34fb
+   ReconnectAttempts=13
+   ReconnectIntervals=1,2,4,8,16,32,32,32,64,64,64
+   ```
+
+
 # Productivity Suite
 ## Installing the [Albert Launcher](https://albertlauncher.github.io/)
 ```console
