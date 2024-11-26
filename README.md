@@ -171,6 +171,7 @@ polkit.addRule(function(action, subject) {
    1.1. Make sure the following option is enabled:
    ```text
    AutoEnable=true
+   MultiProfile = multiple
    ```
    
    1.2. (Optional) Get device UUIDs to configure the reconnection policy:
