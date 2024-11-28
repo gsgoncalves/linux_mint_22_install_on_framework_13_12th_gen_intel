@@ -73,12 +73,12 @@ nano ~/.profile
 
 ```text
 # Adding custom xandr cmds for more resolutions
-xrandr --newmode "1920x1280_60.00"  206.25  1920 2056 2256 2592  1280 1283 1293 1327 -hsync +vsync
-xrandr --addmode eDP-1  "1920x1280_60.00"
-xrandr --newmode "1624x1080_60.00"  145.50  1624 1728 1896 2168  1080 1083 1093 1120 -hsync +vsync
-xrandr --addmode eDP-1  "1624x1080_60.00"
-xrandr --newmode "1504x1000_60.00"  124.25  1504 1600 1752 2000  1000 1003 1013 1038 -hsync +vsync
-xrandr --addmode eDP-1  "1504x1000_60.00"
+xrandr --newmode "1920x1280-60.00"  206.25  1920 2056 2256 2592  1280 1283 1293 1327 -hsync +vsync
+xrandr --addmode eDP-1  "1920x1280-60.00"
+xrandr --newmode "1624x1080-60.00"  145.50  1624 1728 1896 2168  1080 1083 1093 1120 -hsync +vsync
+xrandr --addmode eDP-1  "1624x1080-60.00"
+xrandr --newmode "1504x1000-60.00"  124.25  1504 1600 1752 2000  1000 1003 1013 1038 -hsync +vsync
+xrandr --addmode eDP-1  "1504x1000-60.00"
 ```
 
 ## Increase Font Sizes across the OS
