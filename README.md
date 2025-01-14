@@ -232,6 +232,10 @@ sudo systemctl start bluetooth-restart.service
 ```
 
 # Productivity Suite
+
+I felt that Mint was missing a snappy all-round search functionality like the one that Ubuntu implements.
+I found this cool project, even better than what I used in Ubuntu, and resembles Mac's Spotlight.
+
 ## Installing the [Albert Launcher](https://albertlauncher.github.io/)
 ```console
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_24.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
