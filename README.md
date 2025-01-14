@@ -199,7 +199,37 @@ polkit.addRule(function(action, subject) {
    ReconnectAttempts=13
    ReconnectIntervals=1,2,4,8,16,32,32,32,64,64,64
    ```
+## Auto restart Bluetooth upon boot
+For some quirky reason, Linux Mint does not let me change my Headphones (WH-1000XM4) codec from HFP to A2DP when the laptop starts.
+If I restart the Bluetooth service it will pick the A2DP. Hence I created an auto restart service as follows:
+```console
+sudo nano /etc/systemd/system/bluetooth-restart.service
+```
 
+Copy the following contents to the service:
+```text
+[Unit]
+Description=Restart Bluetooth Service
+After=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart bluetooth
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Save the file, enable the service, and reload daemon.
+```console
+sudo systemctl enable bluetooth-restart.service
+sudo systemctl daemon-reload
+```
+
+Optional: Test the new service
+```console
+sudo systemctl start bluetooth-restart.service
+```
 
 # Productivity Suite
 ## Installing the [Albert Launcher](https://albertlauncher.github.io/)
